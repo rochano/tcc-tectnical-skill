@@ -14,7 +14,7 @@ const productionApiUrl = 'https://api.your-production-domain.com';
 
 // 3. กำหนดค่าสำหรับ Development (ค่า Default)
 // ในการทำงานปกติ (Development) ถ้าไม่มีการกำหนดค่าใหม่, จะใช้ค่านี้
-const developmentApiUrl = 'https://localhost:7060'; 
+const developmentApiUrl = 'http://localhost:5000'; 
 
 export const appConfig: ApplicationConfig = {
   providers: [
