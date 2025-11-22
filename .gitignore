@@ -1,1 +1,94 @@
-Git Ignore File for Monorepo (Angular Frontend & C# Backend)--------------------1. GLOBAL IGNORES--------------------Dependenciesnode_modulesLogsnpm-debug.logyarn-error.logOS Files.DS_StoreThumbs.dbEnvironment Variables (IMPORTANT: Never commit sensitive keys).env.env.**.localVS Code.vscode/--------------------2. FRONTEND (Angular)--------------------Angular build output/frontend/dist//frontend/out-tsc/Local project config/frontend/.angular/IDEs/frontend/.idea/--------------------3. BACKEND (C# / .NET)--------------------Compiled output/backend/bin//backend/obj/Test resultsTestResults/Package files*.nupkg*.suo*.user*.userosscache*.userprefs
+# ==================================
+# 1. VISUAL STUDIO / IDE FILES
+# ==================================
+# Visual Studio user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vshost.exe
+# VS Code specific files (optional, remove if you want to share settings)
+.vscode/
+
+# Project files that should not be committed
+*.csproj.user
+*.vcxproj.user
+*.xproj.user
+*.rcproj.user
+
+*.angular/cache/
+
+# ==================================
+# 2. .NET / C# BINARIES & OUTPUT
+# ==================================
+# Dependency folders generated during build (Crucial: DO NOT COMMIT THESE!)
+[Bb]in/
+[Oo]bj/
+
+# Test results and temporary files
+TestResults/
+*.trx
+*.log
+
+# NuGet packages
+.nuget/
+*.nupkg
+*.snupkg
+# The packages folder is generally ignored, unless explicitly required
+packages/
+
+# ==================================
+# 3. ASP.NET CORE / WEB FILES
+# ==================================
+# Runtime/Config settings (contains local ports, often needs to be ignored)
+# NOTE: ถ้าคุณต้องการให้เพื่อนร่วมทีมใช้ port 5000 ด้วย อาจจะต้องไม่ ignore ไฟล์นี้
+# แต่โดยทั่วไป ควร ignore ไฟล์ที่เก็บค่าเฉพาะเครื่อง
+Properties/launchSettings.json 
+.vs/
+
+# Compiled Web Assets
+wwwroot/
+wwwroot/css/
+wwwroot/js/
+
+# Temporary files created by ASP.NET Core
+temp/
+
+# ==================================
+# 4. NODE.JS / REACT FRONTEND
+# ==================================
+# Dependency folder for all Node projects (CRUCIAL: DO NOT COMMIT THIS!)
+node_modules/
+
+# Build output folder for React (e.g., 'dist' or 'build')
+dist/
+build/
+.cache/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# ==================================
+# 5. Database & Secrets
+# ==================================
+# Local database files (if you use SQLite locally)
+*.db
+*.sqlite
+*.sqlite-journal
+
+# Configuration files containing sensitive information (secrets)
+appsettings.Development.json
+appsettings.Production.json
+# หรือไฟล์ที่เก็บ JWT Secret Key ถ้าคุณแยกออกมาต่างหาก
+secrets.json
+
+# ==================================
+# 6. Angular & TypeScript Build Artifacts
+# ==================================
+/dist
+/out-tsc
+/tmp
+.angular/cache
