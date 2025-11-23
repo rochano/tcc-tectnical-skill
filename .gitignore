@@ -16,7 +16,7 @@
 *.xproj.user
 *.rcproj.user
 
-*.angular/cache/
+.angular/cache/
 
 # ==================================
 # 2. .NET / C# BINARIES & OUTPUT
