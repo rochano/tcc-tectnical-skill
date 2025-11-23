@@ -281,7 +281,7 @@ export class App implements OnInit {
       return;
     }
 
-    // 2. NEW: Confirm Password Check
+    // 2. Confirm Password Check
     if (this.registerPassword !== this.registerConfirmPassword) {
       this.statusType.set('error');
       this.statusMessage.set('Passwords do not match. Please ensure both passwords are the same.');
