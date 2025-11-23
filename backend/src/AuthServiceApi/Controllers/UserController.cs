@@ -23,7 +23,6 @@ namespace AuthServiceApi.Controllers
         [HttpGet("profile")]
         public IActionResult GetProfile()
         {
-            // Logic เดิมจาก Program.cs
             var username = _httpContextAccessor.HttpContext?.User.Identity?.Name;
 
             if (username == null)
